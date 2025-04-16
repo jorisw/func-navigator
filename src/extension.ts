@@ -60,7 +60,7 @@ export class FunctionListProvider implements vscode.TreeDataProvider<TreeItem> {
     }
 
     private extractItems(text: string): TreeItem[] {
-        const functionRegex = /\b(?:function|const|let)\s+([a-zA-Z0-9_]+)\s*(?:\([^)]*\))?\s*=>|\bfunction\s+([a-zA-Z0-9_]+)\s*\(/g;
+        const functionRegex = /\b(?:async|function|const|let)\s+([a-zA-Z0-9_]+)\s*(?:\([^)]*\))?\s*=>|\bfunction\s+([a-zA-Z0-9_]+)\s*\(/g;
         const classRegex = /class\s+([a-zA-Z0-9_]+)\s*(?:extends\s+[a-zA-Z0-9_]+\s*)?(?:implements\s+[a-zA-Z0-9_,\s]+)?\s*\{([\s\S]*?)\n\}/g;
         const methodRegex = /^\s*([a-zA-Z0-9_]+)\s*\(/gm;
 
